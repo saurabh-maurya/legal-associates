@@ -110,7 +110,7 @@ a {
   padding: 3em 0; }
   @media (min-width: 768px) {
     .site-section {
-      padding: 7em 0; } }
+      padding: 4em 0; } }
   .site-section.site-section-sm {
     padding: 4em 0; }
 
@@ -238,7 +238,7 @@ a {
 
 /* Navbar */
 .site-navbar-top .site-logo {
-  font-size: 2rem; }
+  font-size: 1rem; }
 
 .site-navbar-wrap {
   position: relative;
@@ -253,7 +253,6 @@ a {
   margin-bottom: 0px;
   width: 100%;
   border-bottom: none;
-  position: absolute;
   z-index: 99; }
   .site-navbar .site-logo {
     font-weight: 200; }
@@ -264,21 +263,21 @@ a {
     margin-bottom: 0;
     margin-left: 0;
     padding-left: 0; }
-    .site-navbar .site-navigation .site-menu .active > a {
-      color: #fff; }
     .site-navbar .site-navigation .site-menu a {
       text-decoration: none !important;
       display: inline-block; }
     .site-navbar .site-navigation .site-menu > li {
       display: inline-block;
       padding: 10px 5px; }
+      .site-navbar .site-navigation .site-menu .active {
+        color: #cea15a; }
       .site-navbar .site-navigation .site-menu > li > a {
         padding: 10px 10px;
         letter-spacing: .05em;
-        color: rgba(255, 255, 255, 0.6);
+        color: #fff;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #fff; }
+          color: #cea15a; }
       .site-navbar .site-navigation .site-menu > li:last-child {
         padding-right: 0; }
         .site-navbar .site-navigation .site-menu > li:last-child > a {
@@ -730,7 +729,7 @@ p.dropcap:first-child:first-letter {
     right: 0;
     top: 0;
     background: rgba(41, 52, 98, 0.8); }
-  .section-4 h2, .section-4 p {
+  .section-4 h2 {
     color: #fff; }
 
 .feature-1 .feature-1-icon {
@@ -755,16 +754,17 @@ p.dropcap:first-child:first-letter {
 .feature-1 .feature-1-contents .number, .feature-1 .feature-1-contents .caption {
   display: block; }
 
-.feature-1 .feature-1-contents .number {
-  font-size: 3rem;
-  line-height: 1;
-  color: #fff;
-  margin-bottom: 10px; }
+/* .feature-1 .feature-1-contents .number {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #cea15a;
+  margin-bottom: 10px; } */
 
 .feature-1 .feature-1-contents .caption {
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #cea15a; }
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #cea15a;
+  margin-bottom: 10px; }
 
 .person-1 .person-1-contents {
   width: 90%;
