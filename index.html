@@ -229,7 +229,7 @@
         <div class="practice-card">
           <i class="fas fa-bank"></i>
           <h3>Banking Law</h3>
-          <p>bBnking regulations, loan recovery, banking disputes, and compliance matters</p>
+          <p>Banking regulations, loan recovery, banking disputes, and compliance matters</p>
         </div>
       </div>
     </div>
@@ -552,6 +552,97 @@
 
   <script src="js/main.js"></script>
   <script src="js/main_new.js"></script>
+
+  <!-- Modal Structure -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <h2>Disclaimer!</h2>
+      <p>Pursuant to regulations by the Indian Bar Council, law firms are prohibited from advertising or soliciting work via public communication. This website serves solely informational purposes and is not intended for advertising. Sumit Legal Associates explicitly disclaims any intention to solicit clients through this website.</p>
+      <p>We do not assume responsibility for decisions made by visitors solely based on the information provided herein. By clicking 'ENTER', visitors acknowledge that the content of this website:</p>
+      <ul style="list-style-type: none; padding-left: 20px;">
+        <li><p>1. Does not constitute advertising or solicitation</p></li>
+        <li><p>2. Is intended solely for their understanding of our activities and identity.</p></li>
+      </ul>
+      <button id="okButton" class="btn btn-primary">Enter</button>
+    </div>
+  </div>
+
+  <style>
+    .modal {
+      display: block;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.3s ease-in-out;
+    }
+
+    .modal-content h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .modal-content p {
+      margin-bottom: 15px;
+      color: #666;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .modal-content .btn {
+      display: block;
+      margin: 25px auto 0;
+      padding: 12px 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('welcomeModal');
+      const okButton = document.getElementById('okButton');
+
+      // Close modal and scroll to main content when OK button is clicked
+      okButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Store in localStorage that modal was shown
+      localStorage.setItem('modalShown', 'true');
+    });
+  </script>
 </body>
 
 </html>
