@@ -291,3 +291,145 @@
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Navbar Responsive */
+  .site-navbar {
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .site-menu {
+    display: none;
+  }
+
+  /* Hero Section Responsive */
+  .site-blocks-cover {
+    min-height: 70vh;
+  }
+
+  .site-blocks-cover h1 {
+    font-size: 2rem;
+  }
+
+  .site-blocks-cover p {
+    font-size: 1rem;
+  }
+
+  /* Practice Cards Responsive */
+  .practice-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .practice-card {
+    padding: 20px;
+  }
+
+  .practice-card i {
+    font-size: 2rem;
+  }
+
+  .practice-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .practice-card p {
+    font-size: 0.9rem;
+  }
+
+  /* About Section Responsive */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Contact Section Responsive */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-request {
+    padding: 20px;
+  }
+
+  /* Modal Responsive */
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+
+  /* General Responsive Adjustments */
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Benefits Grid Responsive */
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .benefit-card {
+    padding: 20px;
+  }
+
+  .benefit-card i {
+    font-size: 2rem;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .site-blocks-cover {
+    min-height: 60vh;
+  }
+
+  .site-blocks-cover h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    width: 100%;
+    margin: 5% auto;
+  }
+}
