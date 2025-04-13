@@ -298,7 +298,7 @@ CircleAudioPlayer.prototype = {
 
 // now init one as an example
 var cap = new CircleAudioPlayer({
-	audio: 'http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3',
+	audio: 'https://www.largesound.com/ashborytour/sound/AshboryBYU.mp3',
   size: 120,
   borderWidth: 4
 });
