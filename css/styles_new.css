@@ -240,3 +240,54 @@
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
+
+/* Background Image Optimizations */
+.site-blocks-cover {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: none;
+}
+
+.site-blocks-cover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.site-blocks-cover .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Remove all overlay effects */
+.site-blocks-cover.overlay::before {
+  display: none;
+}
+
+/* Responsive Image Loading */
+@media (max-width: 768px) {
+  .site-blocks-cover::after {
+    background-attachment: scroll;
+  }
+}
+
+/* Preload Critical Image */
+@font-face {
+  font-display: swap;
+}
+
+/* Optimize Image Rendering */
+.site-blocks-cover {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
